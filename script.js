@@ -99,7 +99,7 @@ class Effect {
     for (let y = 0; y < this.rows; y++) {
       for (let x = 0; x < this.cols; x++) {
         let angle =
-          (Math.cos(x * this.zoom) * Math.sin(y - this.zoom)) * this.curve;
+          Math.cos(x + this.zoom) * Math.sin(y - this.zoom) * this.curve;
         this.flowField.push(angle);
       }
     }
