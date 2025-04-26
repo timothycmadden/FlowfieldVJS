@@ -76,8 +76,8 @@ class Effect {
     this.rows;
     this.cols;
     this.flowField = [];
-    this.curve = 5;
-    this.zoom = 0.5;
+    this.curve = 100.75;
+    this.zoom = 0.00125;
     this.debug = true;
     this.init();
 
@@ -99,7 +99,7 @@ class Effect {
     for (let y = 0; y < this.rows; y++) {
       for (let x = 0; x < this.cols; x++) {
         let angle =
-          Math.cos(x + this.zoom) * Math.sin(y - this.zoom) * this.curve;
+          Math.cos(x - this.zoom) * Math.sin(y + this.zoom) * this.curve;
         this.flowField.push(angle);
       }
     }
